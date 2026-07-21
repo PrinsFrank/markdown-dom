@@ -12,7 +12,7 @@ class TextTest extends TestCase {
         static::assertSame(
             'foo',
             (new Text('foo'))
-                ->__toString()
+                ->__toString(),
         );
     }
 }

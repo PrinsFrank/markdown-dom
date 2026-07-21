@@ -13,17 +13,17 @@ class DocumentTest extends TestCase {
         static::assertSame(
             '',
             (new Document())
-                ->__toString()
+                ->__toString(),
         );
         static::assertSame(
             'foo',
             (new Document(new Text('foo')))
-                ->__toString()
+                ->__toString(),
         );
         static::assertSame(
             'foobar',
             (new Document(new Text('foo'), new Text('bar')))
-                ->__toString()
+                ->__toString(),
         );
     }
 }

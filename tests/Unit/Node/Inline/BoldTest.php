@@ -13,12 +13,12 @@ class BoldTest extends TestCase {
         static::assertSame(
             '**foo**',
             (new Bold(new Text('foo')))
-                ->__toString()
+                ->__toString(),
         );
         static::assertSame(
             '**foobar**',
             (new Bold(new Text('foo'), new Text('bar')))
-                ->__toString()
+                ->__toString(),
         );
     }
 }

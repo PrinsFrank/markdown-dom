@@ -14,7 +14,7 @@ readonly class Document implements Stringable {
     /** @no-named-arguments */
     public function __construct(
         BlockNode|InlineNode... $nodes,
-    ){
+    ) {
         $this->nodes = $nodes;
     }
 

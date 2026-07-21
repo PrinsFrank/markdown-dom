@@ -2,4 +2,4 @@
 
 namespace PrinsFrank\MarkDownDom\Contract;
 
-interface InlineNode extends Node { }
+interface InlineNode extends Node {}

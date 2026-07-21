@@ -2,4 +2,4 @@
 
 namespace PrinsFrank\MarkDownDom\Contract;
 
-interface BlockNode extends Node { }
+interface BlockNode extends Node {}
