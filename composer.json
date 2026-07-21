@@ -7,6 +7,11 @@
             "PrinsFrank\\MarkDownDom\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "PrinsFrank\\MarkDownDom\\Tests\\": "tests/"
+        }
+    },
     "require": {
         "php": "^8.2"
     },
