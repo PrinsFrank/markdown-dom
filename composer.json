@@ -1,5 +1,6 @@
 {
     "name": "prinsfrank/markdown-dom",
+    "description": "A minimal library to generate MarkDown DOM elements",
     "type": "library",
     "license": "MIT",
     "autoload": {
