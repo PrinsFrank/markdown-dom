@@ -14,12 +14,12 @@ class HeadingTest extends TestCase {
         static::assertSame(
             '# foobar',
             (new Heading(HeadingLevel::Level1, new Text('foo'), new Text('bar')))
-                ->__toString()
+                ->__toString(),
         );
         static::assertSame(
             '###### foobar',
             (new Heading(HeadingLevel::Level6, new Text('foo'), new Text('bar')))
-                ->__toString()
+                ->__toString(),
         );
     }
 }

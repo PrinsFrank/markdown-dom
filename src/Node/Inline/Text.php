@@ -8,7 +8,7 @@ use PrinsFrank\MarkDownDom\Contract\InlineNode;
 readonly class Text implements InlineNode {
     public function __construct(
         private string $content,
-    ){}
+    ) {}
 
     #[Override]
     public function __toString(): string {

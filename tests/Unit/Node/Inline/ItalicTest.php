@@ -13,12 +13,12 @@ class ItalicTest extends TestCase {
         static::assertSame(
             '*foo*',
             (new Italic(new Text('foo')))
-                ->__toString()
+                ->__toString(),
         );
         static::assertSame(
             '*foobar*',
             (new Italic(new Text('foo'), new Text('bar')))
-                ->__toString()
+                ->__toString(),
         );
     }
 }
