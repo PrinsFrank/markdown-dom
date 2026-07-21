@@ -1,0 +1,11 @@
+{
+    "name": "prinsfrank/markdown-dom",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PrinsFrank\\MarkDownDom\\": "src/"
+        }
+    },
+    "require": {}
+}
