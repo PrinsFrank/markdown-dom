@@ -16,9 +16,13 @@ abstract class Renderer {
     }
 
     /** @param list<Node> $nodes */
-    protected function renderChildren(array $nodes): string {
+    protected function renderChildren(array $nodes, string $separator = ''): string {
         $output = '';
-        foreach ($nodes as $node) {
+        foreach ($nodes as $index => $node) {
+            if ($index !== 0) {
+                $output .= $separator;
+            }
+
             $output .= $this->renderNode($node);
         }
 
