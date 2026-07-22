@@ -28,7 +28,7 @@ class MarkdownRenderer extends Renderer {
             Table::class => (fn(Table $table): string
                 => (
                     $table->headerRow !== null
-                    ? ($this->renderNode($table->headerRow) . '| ' . str_repeat('--- |', count($table->headerRow->cells)) . PHP_EOL)
+                    ? ($this->renderNode($table->headerRow) . '|' . str_repeat(' --- |', count($table->headerRow->cells)) . PHP_EOL)
                     : ''
                 ) . $this->renderChildren($node->rows) . PHP_EOL)($node),
             TableCell::class => $this->renderChildren($node->children),
