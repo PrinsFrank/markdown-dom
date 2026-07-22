@@ -2,16 +2,17 @@
 
 namespace PrinsFrank\MarkDownDom\Node\Block;
 
-use Override;
 use PrinsFrank\MarkDownDom\Contract\BlockNode;
+use PrinsFrank\MarkDownDom\Contract\InlineNode;
 
 readonly class Quote implements BlockNode {
-    public function __construct(
-        private string $quote,
-    ) {}
+    /** @var list<InlineNode> */
+    public array $children;
 
-    #[Override]
-    public function __toString(): string {
-        return '> ' . str_replace("\n", "> \n", $this->quote) . PHP_EOL;
+    /** @no-named-arguments */
+    public function __construct(
+        InlineNode... $children,
+    ) {
+        $this->children = $children;
     }
 }
