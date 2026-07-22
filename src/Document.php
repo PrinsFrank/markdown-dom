@@ -2,24 +2,28 @@
 
 namespace PrinsFrank\MarkDownDom;
 
-use Override;
 use PrinsFrank\MarkDownDom\Contract\BlockNode;
-use PrinsFrank\MarkDownDom\Contract\InlineNode;
-use Stringable;
+use PrinsFrank\MarkDownDom\Renderer\MarkdownRenderer;
+use PrinsFrank\MarkDownDom\Renderer\TextRenderer;
 
-readonly class Document implements Stringable {
-    /** @var list<BlockNode|InlineNode> */
-    private array $nodes;
+readonly class Document {
+    /** @var list<BlockNode> */
+    public array $nodes;
 
     /** @no-named-arguments */
     public function __construct(
-        BlockNode|InlineNode... $nodes,
+        BlockNode... $nodes,
     ) {
         $this->nodes = $nodes;
     }
 
-    #[Override]
-    public function __toString(): string {
-        return implode('', $this->nodes);
+    public function toMarkdown(): string {
+        return (new MarkdownRenderer())
+            ->render($this);
+    }
+
+    public function toText(): string {
+        return (new TextRenderer())
+            ->render($this);
     }
 }
