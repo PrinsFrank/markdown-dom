@@ -25,9 +25,13 @@ class TextRenderer extends Renderer {
     #[Override]
     protected function renderNode(Node $node): string {
         return match ($node::class) {
-            Table::class => $this->renderChildren($node->rows, "\n"),
+            Table::class => (fn(Table $table): string => (
+                $table->headerRow !== null
+                    ? $this->renderNode($table->headerRow) . PHP_EOL
+                    : ''
+            ) . $this->renderChildren($node->rows, "\n") . PHP_EOL)($node),
             TableCell::class => $this->renderChildren($node->children),
-            TableRow::class => $this->renderChildren($node->cells, "\n"),
+            TableRow::class => $this->renderChildren($node->cells, ' '),
             CodeBlock::class => $node->code,
             Heading::class => $this->renderChildren($node->children),
             Paragraph::class => $this->renderChildren($node->children),
