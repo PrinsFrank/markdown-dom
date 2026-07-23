@@ -27,4 +27,22 @@ class DocumentTest extends TestCase {
                 ->toMarkdown(),
         );
     }
+
+    public function testToText(): void {
+        static::assertSame(
+            '',
+            (new Document())
+                ->toText(),
+        );
+        static::assertSame(
+            'foo',
+            (new Document(new Paragraph(new Text('foo'))))
+                ->toText(),
+        );
+        static::assertSame(
+            'foobar',
+            (new Document(new Paragraph(new Text('foo'), new Text('bar'))))
+                ->toText(),
+        );
+    }
 }
