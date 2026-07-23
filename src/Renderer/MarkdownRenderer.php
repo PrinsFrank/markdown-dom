@@ -34,7 +34,7 @@ class MarkdownRenderer extends Renderer {
             TableCell::class => $this->renderChildren($node->children),
             TableRow::class => '| ' . implode(' | ', array_map(fn(TableCell $cell) => $this->renderNode($cell), $node->cells)) . ' |' . PHP_EOL,
             CodeBlock::class => '```' . ($node->infoString ?? '') . PHP_EOL . $node->code . PHP_EOL . '```' . PHP_EOL,
-            Heading::class => str_repeat('#', $node->level->value) . ' ' . $this->renderChildren($node->children),
+            Heading::class => str_repeat('#', $node->level->value) . ' ' . $this->renderChildren($node->children) . PHP_EOL . PHP_EOL,
             Paragraph::class => $this->renderChildren($node->children),
             Quote::class => '> ' . str_replace("\n", "\n> ", $this->renderChildren($node->children)) . PHP_EOL,
             ThematicBreak::class => '---' . PHP_EOL,
