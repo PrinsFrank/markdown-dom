@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace PrinsFrank\MarkDownDom\Tests\Renderer;
+namespace PrinsFrank\MarkDownDom\Tests\Unit\Renderer;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
