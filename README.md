@@ -1,6 +1,6 @@
 # markdown-dom
 
-[![GitHub](https://img.shields.io/github/license/prinsfrank/markdown-dom)](https://github.com/PrinsFrank/markdown-dom/blob/main/LICENSE)
+[![GitHub](https://img.shields.io/badge/license-MIT-green)](https://github.com/PrinsFrank/markdown-dom/blob/main/LICENSE)
 [![PHP Version Support](https://img.shields.io/packagist/php-v/prinsfrank/markdown-dom)](https://github.com/PrinsFrank/markdown-dom/blob/main/composer.json)
 [![codecov](https://codecov.io/gh/PrinsFrank/markdown-dom/branch/main/graph/badge.svg?token=W5NFFSUIQM)](https://codecov.io/gh/PrinsFrank/markdown-dom)
 [![PHPStan Level](https://img.shields.io/badge/PHPStan-level%2010-brightgreen.svg?style=flat)](https://github.com/PrinsFrank/markdown-dom/blob/main/phpstan.neon)
