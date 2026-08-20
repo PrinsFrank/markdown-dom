@@ -8,6 +8,6 @@
  */
 spl_autoload_register(
     fn (string $FQN) => str_starts_with($FQN, 'PrinsFrank\\MarkDownDom\\')
-        ? require_once __DIR__ . '/src/' . str_replace('\\', DIRECTORY_SEPARATOR, substr($FQN, 21)) . '.php'
+        ? require_once __DIR__ . '/src/' . str_replace('\\', DIRECTORY_SEPARATOR, substr($FQN, 22)) . '.php'
         : null
 );
